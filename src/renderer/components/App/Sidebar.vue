@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="min-vh-100" draggable="false">
         <b-list-group>
             <b-list-group-item
                 variant="primary"

@@ -1,9 +1,9 @@
 <template>
-    <div id="app" class="h-100">
+    <div id="app" class="min-vh-100">
         <main>
             <b-container fluid>
                 <b-row>
-                    <Sidebar></Sidebar>
+                    <Sidebar sticky></Sidebar>
                     <b-col class="py-3">
                         <router-view></router-view>
                     </b-col>
