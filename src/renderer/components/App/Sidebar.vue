@@ -1,27 +1,65 @@
 <template>
     <div class="sidebar">
         <b-list-group>
-            <b-list-group-item variant="primary" active to="/cloudfront" class="p-0">
-                <router-link tag="span" to="/cloudfront" :click="active">
+            <b-list-group-item
+                variant="primary"
+                to="/cloudfront"
+                class="p-0"
+                :active="isSelected(0)"
+                v-on:click="setSelected(0)"
+            >
+                <router-link tag="span" to="/cloudfront">
                     <p class="p-3 m-0">CloudFront</p>
                 </router-link>
             </b-list-group-item>
 
-            <b-list-group-item button variant="primary" class="p-0" :click="active()">
+            <b-list-group-item
+                variant="primary"
+                to="/lambda"
+                class="p-0"
+                :active="isSelected(1)"
+                v-on:click="setSelected(1)"
+            >
                 <router-link tag="span" to="/lambda">
                     <p class="p-3 m-0">Lambda</p>
                 </router-link>
             </b-list-group-item>
 
-            <router-link tag="span" to="/s3">
-                <b-list-group-item button variant="primary">S3</b-list-group-item>
-            </router-link>
-            <router-link tag="span" to="/sqs">
-                <b-list-group-item button variant="primary">SQS</b-list-group-item>
-            </router-link>
-            <router-link tag="span" to="/cloudwatch">
-                <b-list-group-item button variant="primary">CloudWatch</b-list-group-item>
-            </router-link>
+            <b-list-group-item
+                variant="primary"
+                to="/s3"
+                class="p-0"
+                :active="isSelected(2)"
+                v-on:click="setSelected(2)"
+            >
+                <router-link tag="span" to="/s3">
+                    <p class="p-3 m-0">S3</p>
+                </router-link>
+            </b-list-group-item>
+
+            <b-list-group-item
+                variant="primary"
+                to="/sqs"
+                class="p-0"
+                :active="isSelected(3)"
+                v-on:click="setSelected(3)"
+            >
+                <router-link tag="span" to="/sqs">
+                    <p class="p-3 m-0">SQS</p>
+                </router-link>
+            </b-list-group-item>
+
+            <b-list-group-item
+                variant="primary"
+                to="/cloudwatch"
+                class="p-0"
+                :active="isSelected(4)"
+                v-on:click="setSelected(4)"
+            >
+                <router-link tag="span" to="/cloudwatch">
+                    <p class="p-3 m-0">CloudWatch</p>
+                </router-link>
+            </b-list-group-item>
         </b-list-group>
 
         <!-- <b-button v-b-toggle.sidebar-component variant="info" class="mb-2">
@@ -56,9 +94,17 @@
 <script>
 export default {
     name: "sidebar",
+    data() {
+        return {
+            selected: null
+        };
+    },
     methods: {
-        active(number) {
-            console.log("Sidebar button pressed->", number);
+        isSelected(i) {
+            return i == this.selected;
+        },
+        setSelected(i) {
+            this.selected = i;
         }
     }
 };
