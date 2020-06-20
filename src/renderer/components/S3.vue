@@ -1,12 +1,12 @@
 <template>
-    <div id="landing-page">
-        <div class="title">Getting Started</div>
+    <div id="s3">
+        <div class="title">S3 Coming soon</div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "landing-page",
+    name: "s3",
     components: {},
     methods: {}
 };

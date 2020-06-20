@@ -1,12 +1,12 @@
 <template>
-    <div id="landing-page">
-        <div class="title">Getting Started</div>
+    <div id="cloudfront">
+        <div class="title">CloudFront</div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "landing-page",
+    name: "cloudfront",
     components: {},
     methods: {}
 };

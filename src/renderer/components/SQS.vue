@@ -1,12 +1,12 @@
 <template>
-    <div id="landing-page">
-        <div class="title">Getting Started</div>
+    <div id="sqs">
+        <div class="title">SQS Coming soon</div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "landing-page",
+    name: "sqs",
     components: {},
     methods: {}
 };
