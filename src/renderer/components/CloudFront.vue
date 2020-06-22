@@ -8,6 +8,9 @@
 export default {
     name: "cloudfront",
     components: {},
-    methods: {}
+    async beforeCreate() {
+        console.log("test method running");
+        this.$store.dispatch("sampleModule/sampleAction");
+    }
 };
 </script>

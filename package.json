@@ -50,6 +50,7 @@
         }
     },
     "dependencies": {
+        "aws-sdk": "^2.701.0",
         "axios": "^0.18.0",
         "bootstrap": "^4.5.0",
         "bootstrap-vue": "^2.15.0",
