@@ -10,10 +10,6 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 Vue.use(BootstrapVue) // Install BootstrapVue
 Vue.use(IconsPlugin) // Optionally install the BootstrapVue icon components plugin
 
-// plugins/helpers
-import plugins from './plugins/helpers';
-Vue.use(plugins);
-
 // SVG inline
 import { InlineSvgPlugin } from 'vue-inline-svg';
 Vue.use(InlineSvgPlugin);
@@ -21,6 +17,14 @@ Vue.use(InlineSvgPlugin);
 // Eva icons
 import EvaIcons from 'vue-eva-icons'
 Vue.use(EvaIcons)
+
+// Titlebar
+import customTitlebar from './plugins/customTitlebar';
+Vue.use(customTitlebar);
+
+// plugins/helpers
+import plugins from './plugins/helpers';
+Vue.use(plugins);
 
 // Add Global mixin
 import Mixins from './helpers/mixins/Mixins.vue';

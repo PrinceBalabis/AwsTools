@@ -1,10 +1,10 @@
 <template>
-    <div id="app" class="min-vh-100">
-        <main>
-            <b-container fluid>
-                <b-row>
+    <div id="app">
+        <main role="main">
+            <b-container id="container-main" fluid>
+                <b-row id="row-main">
                     <Sidebar sticky></Sidebar>
-                    <b-col class="py-3">
+                    <b-col id="col-main" class="py-3">
                         <router-view></router-view>
                     </b-col>
                 </b-row>

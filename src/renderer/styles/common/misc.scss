@@ -1,0 +1,30 @@
+// App should extend to whole vertical viewport
+html,
+body {
+    min-height: 100vh !important;
+    height: 100vh !important;
+
+    // Set content of body to take full height minus height of header
+    .container-after-titlebar {
+        height: 100% !important;
+
+        #app {
+            height: 100% !important;
+
+            main {
+                height: calc(100vh - 72px);
+
+                #container-main {
+                    height: 100% !important;
+                    #row-main {
+                        height: 100% !important;
+
+                        #col-main {
+                            @extend .py-4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

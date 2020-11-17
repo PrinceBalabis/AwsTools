@@ -1,9 +1,8 @@
 <script>
 export default {
     methods: {
-        // Fetch a label
-        printLabel(labelId) {
-            return this.$store.getters["labels/label"](labelId);
+        adfgdfgsdfg(title) {
+            console.log(this.$customTitlebar);
         }
     },
     computed: {}
